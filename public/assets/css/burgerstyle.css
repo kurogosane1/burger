@@ -1,0 +1,36 @@
+body{
+    background-color: #fcc55d;
+}
+
+.burgerImage
+{
+    width: 100px;
+    height: 100px;
+}
+.devowered{
+    text-align: left;
+    font-family: monospace;
+    margin-left: 150px;
+
+}
+.ordered
+{
+    text-align: left;
+    margin-left: 100px;
+    font-family: monospace;
+}
+.eatten
+{
+    margin-left: 10px;
+    margin-bottom: 2px;
+
+}
+
+button {
+    box-shadow: 0 8px 16px 0 rgba(181, 0, 0, 0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+}
+

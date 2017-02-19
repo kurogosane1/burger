@@ -5,6 +5,9 @@ var methodOverride = require('method-override');
 
 var path = require("path");
 
+
+
+
 // var orm = require("./config/orm.js");
 
 
@@ -28,6 +31,8 @@ app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 require("./controllers/burger_controller.js")(app);
+
+console.log(req.url);
 
 //listening for the localhost so it will run on localhost:8080.
 app.listen(process.env.PORT || 8080);

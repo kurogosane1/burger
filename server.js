@@ -14,7 +14,7 @@ var path = require("path");
 
 //creating a localhost with a port number
 var app = express();
-var PORT = process.env.PORT || 8080;
+var PORT = process.env.PORT || 3000;
 
 // Serve static content for the app from the "public" directory in the application directory.
 app.use(express.static(__dirname + "/public"));
@@ -32,8 +32,10 @@ app.set("view engine", "handlebars");
 
 require("./controllers/burger_controller.js")(app);
 
-console.log(req.url);
+
 
 //listening for the localhost so it will run on localhost:8080.
-app.listen(process.env.PORT || 8080);
+app.listen(process.env.PORT || 3000);
+
+console.log('listen to port '+PORT)
 

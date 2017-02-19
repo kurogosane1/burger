@@ -1,0 +1,49 @@
+<div class="container main">
+  <div class="row">
+    <div class="col-sm-6 leftCol">
+      <h3>Order Complete</h3>
+      <!--  list the burgers ordered -->
+      <ul style="list-style: none;" class="alignTwo">
+      {{#each burgerList}}
+        {{#if this.devoured}}
+        {{else}}
+          <li>
+            <div class="row">
+              <div class="col-sm-9">
+                <span class="left notDevour">
+                  {{this.burger_name}}
+                </span>
+              </div>
+
+                <form action="/?_method=PUT" method="POST">
+                  <input type="hidden" name="id" value="{{this.id}}">
+                    <div class="devour">
+                      <button type="submit">Devour!</button>
+                    </div>
+                </form>
+              
+            </div>
+          <li>
+      {{/if}}
+      {{/each}}
+      </ul>
+    </div>
+
+    <div class="col-sm-6">
+      <h3>Serve & Enjoy!!!</h3>
+      
+      <!-- Devoured burgers-->
+      <ul style="list-style: none;" class="align">
+      {{#each burgerList}}
+        {{#if this.devoured}}
+          <li>
+            <span class="align">
+              {{this.burger_name}}
+            </span>
+          </li>
+        {{/if}}
+      {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
